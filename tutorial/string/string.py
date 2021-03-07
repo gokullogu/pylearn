@@ -40,3 +40,27 @@ print(strslice[4:])   #slice from 4 to end
 print(strslice[-5:-1]) #slice from end -1 
 
 
+"""escape characters"""
+#expand tab space between letters with /t
+strtb="g\to\tk\tu\tl".expandtabs(2);
+print(strtb)
+
+#singel inside single quotes
+#strdb='it's right'       will throw error
+print('isn\'t right')
+
+#back slash
+print("first \ will delete second \ in \\")
+
+#\n shifts welocme to new line
+print("hello\nwelcome")
+
+print("\n")
+#deletes everything before \r and prints the rest to next line
+print("welcome\rworld")
+
+#octal value of chars
+print("\110 110","\n\145 145")
+
+#hexa number
+print("\x48 x48","\n \x65 x65")
