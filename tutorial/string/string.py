@@ -64,3 +64,41 @@ print("\110 110","\n\145 145")
 
 #hexa number
 print("\x48 x48","\n \x65 x65")
+
+
+
+
+
+#total output
+"""
+hello all
+gokul L
+gokul
+lorem ipsum ipsum lorem ipsum
+e
+g
+o
+k
+u
+l
+5
+True
+yes ,free is there
+True
+no ,bet is not there
+elc
+ome
+lcom
+g o k u l
+isn't right
+first \ will delete second \ in \
+hello
+welcome
+
+
+worldme
+H 110
+e 145
+H x48
+ e x65
+"""
