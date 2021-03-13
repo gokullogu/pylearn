@@ -53,6 +53,7 @@ def my_ret(x):
 print(my_ret(3))   
 
 #recursive function to print sum of 0 to 5
+print("recursive function")
 def rec_fun(k):
     if(k>0):
         x=k+rec_fun(k-1)
