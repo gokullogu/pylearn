@@ -38,12 +38,13 @@ for x in range(3,30,3):
     print(x)
 
 #print upto 6
-print("print upto 6")
+print("\n","print upto 6")
 for x in range(6):
     print(x)
 else:
     print("x not less than 6")       
 
+#if for is empty
 for x in [0,1,2]:
     pass
 
@@ -54,3 +55,12 @@ fruits=["apple","banana","cherry"]
 for x in adj:
     for y in fruits:
         print(x,y)
+
+#for with break
+print("\n","for with break")
+for x in range(6):
+    if x==3:break
+    print(x)
+else:
+    print("finished for loop")
+
