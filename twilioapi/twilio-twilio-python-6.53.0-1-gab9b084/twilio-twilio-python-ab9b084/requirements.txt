@@ -1,7 +1,0 @@
-flake8
-mock
-nose
-six
-requests>=2.0.0
-PyJWT==1.7.1
-twine
