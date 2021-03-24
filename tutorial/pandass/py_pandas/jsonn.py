@@ -3,7 +3,7 @@ import pandas as pde
 
 
 #json objects has similar format to python dictionary
-df=pde.read_json('py_pandas/jdata.json')
+df=pde.read_json('pandass/py_pandas/jdata.json')
 print(df.to_string())
 """
  Duration  Pulse  Maxpulse  Calories

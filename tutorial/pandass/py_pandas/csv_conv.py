@@ -3,7 +3,7 @@
 import pandas as pd
 
 #read_cv contains only first and last 5 columns 
-health=pd.read_csv('pandas/data.csv')
+health=pd.read_csv('pandass/py_pandas/data.csv')
 print(health)
 #Duration  Pulse  Maxpulse  Calories
 #0          60    110       130     409.1
