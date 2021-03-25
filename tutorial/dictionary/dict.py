@@ -33,7 +33,7 @@ print(len(dict1))
 print(type(dict1))
 #<class 'dict' >
 
-#dict key's value can be of any datatype
+#dict key's value can be of any datatype of str,bool,int,listetc.
 car1={
     "brand":"volvo",
     "auto-gear":True,
