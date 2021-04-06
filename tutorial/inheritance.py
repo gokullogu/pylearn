@@ -49,14 +49,21 @@ class Studentcls3(Parent):
     def __init__(self,fname,lname):
         Parent.__init__(self,fname,lname)
 
+    def printname(self):
+        print(self.fname,"is printed from derived class")
+
 std1=Studentcls3("dhanush","J")
 std1.printname()
+
 
 #the same using super function
 #adding self to super init will cause error
 class Studentspr(Parent):
     def __init__(self,fname,lname):
         super().__init__(fname,lname)
+    
+    def printname(self):
+        print(self.fname)
 
 std1=Studentspr("John","D")
 std1.printname()

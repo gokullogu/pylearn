@@ -8,4 +8,4 @@ print(fl1)
 int1=int(fl_num)
 print(int1)
 
-print(int(fl_num))
+print(int(39.90))

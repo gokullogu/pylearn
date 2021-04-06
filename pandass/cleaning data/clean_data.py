@@ -2,7 +2,7 @@ import pandas as pd
 
 #empty rows can give us a wrong result
 
-dirt=pd.read_csv('pandass/cleaning data/dirtydata.csv')
+dirt=pd.read_csv('cleaning data/dirtydata.csv')
 
 #to remove empty rows use dropna 
 #dropna creates new instance of csv as new_dirt
@@ -41,3 +41,52 @@ print(dirt.to_string())
 #5        23   '2020/2/23'  123.0       324       NaN
 
 
+#insteading odf using the same value to all cells
+#use mean(),median() and mode() to add the values to the empty cell
+
+
+#mean = sum of all values /total number of values
+mdirdt=pd.read_csv('cleaning data/dirtydata.csv')
+x=mdirdt["Maxpulse"].mean()
+mdirdt["Maxpulse"].fillna(x,inplace=True)
+print(mdirdt.to_string())
+"""
+   Duration          Date  Pulse  Maxpulse  Calories
+0       NaN  '2020/12/01'  110.0     130.0     409.1
+1      60.0  '2020/12/02'    NaN     117.0     479.0
+2       NaN  '2020/12/03'  103.0     178.8     422.0
+3      45.0           NaN  109.0     175.0     282.4
+4       NaN  '2020/12/05'  117.0     148.0     406.0
+5      23.0   '2020/2/23'  123.0     324.0       NaN
+"""
+
+
+#mean = middle value in the column in ascending
+meddirt=pd.read_csv('cleaning data/dirtydata.csv')
+x = meddirt["Duration"].median()
+mdirdt["Duration"].fillna(x,inplace=True)
+print(meddirt.to_string())
+"""
+   Duration          Date  Pulse  Maxpulse  Calories
+0       NaN  '2020/12/01'  110.0     130.0     409.1
+1      60.0  '2020/12/02'    NaN     117.0     479.0
+2       NaN  '2020/12/03'  103.0       NaN     422.0
+3      45.0           NaN  109.0     175.0     282.4
+4       NaN  '2020/12/05'  117.0     148.0     406.0
+5      23.0   '2020/2/23'  123.0     324.0       NaN
+"""
+
+#mode = selects the frequent value in the column if no values are frequent takes the least value
+modedirt = pd.read_csv('cleaning data/dirtydata.csv')
+x = modedirt["Calories"].mode()[0]
+modedirt["Calories"].fillna(x, inplace=True)
+print(modedirt.to_string())
+"""
+   Duration          Date  Pulse  Maxpulse  Calories
+0       NaN  '2020/12/01'  110.0     130.0     409.1
+1      60.0  '2020/12/02'    NaN     117.0     479.0
+2       NaN  '2020/12/03'  103.0       NaN     422.0
+3      45.0           NaN  109.0     175.0     282.4
+4       NaN  '2020/12/05'  117.0     148.0     406.0
+5      23.0   '2020/2/23'  123.0     324.0     282.4
+"""
